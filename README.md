@@ -24,7 +24,7 @@ LOGDIR="" python3 -m fastchat.serve.controller \
 
 LOGDIR="" RAY_LOG_TO_STDERR=1 \
     python3 -m fastchat.serve.vllm_worker \
-    --model-path ./VirtualCompiler \
+    --model-path elsagranger/VirtualCompiler \
     --num-gpus 8 \
     --controller http://localhost:21000 \
     --max-num-batched-tokens 40960 \
