@@ -116,18 +116,12 @@ If this work is helpful for your research, please consider citing our work.
       url={https://arxiv.org/abs/2408.06385}, 
 }
 
-@inproceedings{li-etal-2024-privlm,
-    title = "{P}riv{LM}-Bench: A Multi-level Privacy Evaluation Benchmark for Language Models",
-    author = "Li, Haoran  and
-      Guo, Dadi  and
-      Li, Donghao  and
-      Fan, Wei  and
-      Hu, Qi  and
-      Liu, Xin  and
-      Chan, Chunkit  and
-      Yao, Duanyi  and
-      Yao, Yuan  and
-      Song, Yangqiu",
+@inproceedings{gao-etal-2024-virtual,
+    title = "Virtual Compiler Is All You Need For Assembly Code Search",
+    author = "Gao, Zeyu  and
+      Wang, Hao  and
+      Wang, Yuanda  and
+      Zhang, Chao",
     editor = "Ku, Lun-Wei  and
       Martins, Andre  and
       Srikumar, Vivek",
@@ -136,8 +130,8 @@ If this work is helpful for your research, please consider citing our work.
     year = "2024",
     address = "Bangkok, Thailand",
     publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.acl-long.4",
-    pages = "54--73",
-    abstract = "The rapid development of language models (LMs) brings unprecedented accessibility and usage for both models and users. On the one hand, powerful LMs achieve state-of-the-art performance over numerous downstream NLP tasks. On the other hand, more and more attention is paid to unrestricted model accesses that may bring malicious privacy risks of data leakage. To address these issues, many recent works propose privacy-preserving language models (PPLMs) with differential privacy (DP). Unfortunately, different DP implementations make it challenging for a fair comparison among existing PPLMs. In this paper, we present PrivLM-Bench, a multi-perspective privacy evaluation benchmark to empirically and intuitively quantify the privacy leakage of LMs. Instead of only reporting DP parameters, PrivLM-Bench sheds light on the neglected inference data privacy during actual usage. PrivLM-Bench first clearly defines multi-faceted privacy objectives. Then, PrivLM-Bench constructs a unified pipeline to perform private fine-tuning. Lastly, PrivLM-Bench performs existing privacy attacks on LMs with pre-defined privacy objectives as the empirical evaluation results. The empirical attack results are used to fairly and intuitively evaluate the privacy leakage of various PPLMs. We conduct extensive experiments on three datasets of GLUE for mainstream LMs.",
+    url = "https://aclanthology.org/2024.acl-long.167",
+    pages = "3040--3051",
+    abstract = "Assembly code search is vital for reducing the burden on reverse engineers, allowing them to quickly identify specific functions using natural language within vast binary programs.Despite its significance, this critical task is impeded by the complexities involved in building high-quality datasets. This paper explores training a Large Language Model (LLM) to emulate a general compiler. By leveraging Ubuntu packages to compile a dataset of 20 billion tokens, we further continue pre-train CodeLlama as a Virtual Compiler (ViC), capable of compiling any source code to assembly code. This approach allows for {``}virtual{''} compilation across a wide range of programming languages without the need for a real compiler, preserving semantic equivalency and expanding the possibilities for assembly code dataset construction. Furthermore, we use ViC to construct a sufficiently large dataset for assembly code search. Employing this extensive dataset, we achieve a substantial improvement in assembly code search performance, with our model surpassing the leading baseline by 26{\%}.",
 }
 ```
