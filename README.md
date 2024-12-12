@@ -49,7 +49,7 @@ retn
 
 ## Assembly Code Search Encoder
 
-As huggingface does not support load a remote model inside a folder, we host the model trained on the assembly code search dataset augmented by the Virtual Compiler in [vic-encoder](https://cloud.vul337.team:9443/s/t5Ltt8gy7kPfyw8). You can use the `model.py` to test the custom model loading.
+As huggingface does not support load a remote model inside a folder, we host the model trained on the assembly code search dataset augmented by the Virtual Compiler in [vic-encoder](https://cloud.vul337.team:8443/s/t5Ltt8gy7kPfyw8). You can use the `model.py` to test the custom model loading.
 
 Here is a example on text encoder and asm encoder. Please refer to this script on how to extract the assembly code from the binary: [process_asm.py](https://github.com/Hustcw/CLAP/blob/main/scripts/process_asm.py).
 
