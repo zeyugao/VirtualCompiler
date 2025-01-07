@@ -78,12 +78,19 @@ def calc_map_at_k(logits, pos_cnt, ks=[10,]):
 pos_asm_cnt = 1
 
 query = ["List all files in a directory"]
-anchor_asm = [...]
-neg_anchor_asm = [...]
+
+# Extracted by the process_asm.py script mentioned above
+anchor_asm = [ {"1": "endbr64", "2": "mov eax, 0" }, ... ]
+neg_anchor_asm = [ {"1": "push rbp", "2": "mov rbp, rsp", ... }, ... ]
 
 query_embs = text_encoder(**text_tokenizer(query))
-asm_embs = asm_encoder(**asm_tokenizer(anchor_asm))
-asm_neg_emb = asm_encoder(**asm_tokenizer(neg_anchor_asm))
+
+kwargs = dict(padding=True, pad_to_multiple_of=8, return_tensors="pt")
+anchor_asm_ids = asm_tokenizer.pad([asm_tokenizer(pos) for pos in anchor_asm], **kwargs)
+neg_anchor_asm_ids = asm_tokenizer.pad([asm_tokenizer(neg) for neg in neg_anchor_asm], **kwargs)
+
+asm_embs = asm_encoder(**anchor_asm_ids)
+asm_neg_emb = asm_encoder(**neg_anchor_asm_ids)
 
 # query_embs: [query_cnt, emb_dim]
 # asm_embs: [pos_asm_cnt, emb_dim]
